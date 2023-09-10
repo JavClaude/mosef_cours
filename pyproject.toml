@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "mosef-python"
+version = "0.1.0"
+description = ""
+authors = ["javclaude"]
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "^2.1.0"
+
+[tool.poetry.scripts]
+afficher_message_a_l_ecran = 'src.cours.cli.cli_afficher_message_a_l_ecran_en_majuscule:cli_afficher_un_message_en_majuscule'
+fabriquer_une_voiture = 'src.cours.cli.cli_fabriquer_voiture:cli_fabriquer_voiture'
+modeling_titanic = 'src.preprocessing_et_entrainement_modele.cli.cli_entrainement_modele:cli_entrainement_modele'
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.9.0"
+flake8 = "^6.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
